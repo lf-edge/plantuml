@@ -50,7 +50,7 @@ jobs:
           # (We match against github.repository_owner as a kludge so that forked repos can release themselves when testing the workflow)
 
           if [[ "${GITHUB_EVENT_NAME}" == "create" && "${REF_TYPE}" == "tag" && "${REF}" == v* && \
-                ( "${ACTOR}" == "arnaudroques" || "${ACTOR}" == "${GITHUB_REPOSITORY_OWNER}" ) \
+                ( "${ACTOR}" == "ruslan-zededa" || "${ACTOR}" == "${GITHUB_REPOSITORY_OWNER}" ) \
              ]]; then
             echo "::notice title=::This run will release '${REF}'"
             echo "::set-output name=do_release::true"
